@@ -11,17 +11,17 @@ $(function() {
     // Put your code here. Don't change any other code in this file. You will be sad.
 
     var markup = 
-      "<p><strong>Currently: </strong>" + data.currently.summary + ".<br>" +
-      "It feels like <strong>" + data.currently.apparentTemperature + "</strong> Fahrenheit.<br><br>" +
+      "<p><strong>Currently in " + data.timezone + ": </strong>" + data.currently.summary + ".<br>" +
+      "It feels like <strong>" + Math.round(data.currently.apparentTemperature) + "</strong> Fahrenheit.<br><br>" +
 
       "<strong>Tomorrow: </strong>" + data.daily.data[1].summary + "<br>" +
-      "With a mininumum of " + data.daily.data[1].temperatureMin + " and a maximum of " + data.daily.data[1].temperatureMax + " Fahrenheit.<br><br>" +
+      "With a mininumum of " + Math.round(data.daily.data[1].temperatureMin) + " and a maximum of " + Math.round(data.daily.data[1].temperatureMax) + " Fahrenheit.<br><br>" +
 
       "<strong>The day after tomorrow: </strong>" + data.daily.data[2].summary + "<br>" +
-      "With a mininumum of " + data.daily.data[2].temperatureMin + " and a maximum of " + data.daily.data[2].temperatureMax + " Fahrenheit.<br><br>" +
+      "With a mininumum of " + Math.round(data.daily.data[2].temperatureMin) + " and a maximum of " + Math.round(data.daily.data[2].temperatureMax) + " Fahrenheit.<br><br>" +
 
       "<strong>The day after the day after tomorrow: </strong>" + data.daily.data[3].summary + "<br>" +
-      "With a mininumum of " + data.daily.data[3].temperatureMin + " and a maximum of " + data.daily.data[3].temperatureMax + " Fahrenheit.</p>";
+      "With a mininumum of " + Math.round(data.daily.data[3].temperatureMin) + " and a maximum of " + Math.round(data.daily.data[3].temperatureMax) + " Fahrenheit.</p>";
     
     //var markup = "<p>The weather report... " + "will be here when I finish my homework.</p>";
     // End of your code. No, really. Don't change anything below this, or above line 11.
